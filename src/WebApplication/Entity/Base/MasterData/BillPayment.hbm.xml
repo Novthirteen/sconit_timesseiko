@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+ 	<class name="com.Sconit.Entity.MasterData.BillPayment, com.Sconit.Entity" table="BillPayment" lazy="false">
+		<id name="Id" column="Id" type="Int32" unsaved-value="0" >
+      		<generator class="identity" />
+        </id>
+		<many-to-one name="Bill" column="BillNo" class="com.Sconit.Entity.MasterData.Bill, com.Sconit.Entity" cascade="none" />
+		<many-to-one name="Payment" column="PaymentNo" class="com.Sconit.Entity.MasterData.Payment, com.Sconit.Entity" cascade="none" />
+		<property name="BackwashAmount" column="BackwashAmount" type="Decimal"  />
+		<property name="CreateDate" column="CreateDate" type="DateTime"  />
+		<many-to-one name="CreateUser" column="CreateUser" class="com.Sconit.Entity.MasterData.User, com.Sconit.Entity" cascade="none" />
+		<property name="LastModifyDate" column="LastModifyDate" type="DateTime"  />
+		<many-to-one name="LastModifyUser" column="LastModifyUser" class="com.Sconit.Entity.MasterData.User, com.Sconit.Entity" cascade="none" />
+  	</class>
+</hibernate-mapping>

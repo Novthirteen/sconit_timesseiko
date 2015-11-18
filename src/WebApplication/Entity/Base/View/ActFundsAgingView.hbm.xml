@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+ 	<class name="com.Sconit.Entity.View.ActFundsAgingView, com.Sconit.Entity" table="ActFundsAgingView" lazy="false">
+		<id name="Id" column="Id" type="String" unsaved-value="null" >
+      		<generator class="assigned" />
+        </id>
+		<property name="TransactionType" column="TransType" type="String" length="50" />	
+		<many-to-one name="BillAddress" column="BillAddr" class="com.Sconit.Entity.MasterData.BillAddress, com.Sconit.Entity" cascade="none" />
+		<many-to-one name="Currency" column="Currency" class="com.Sconit.Entity.MasterData.Currency, com.Sconit.Entity" cascade="none" />
+		<property name="Status" column="Status" type="String" length="50" />	
+		<property name="NoBackwashAmount1" column="NoBackwashAmount1" type="Decimal"  />	
+		<property name="TotalBillDetailAmount1" column="TotalBillDetailAmount1" type="Decimal"  />	
+		<property name="NoBackwashAmount2" column="NoBackwashAmount2" type="Decimal"  />	
+		<property name="TotalBillDetailAmount2" column="TotalBillDetailAmount2" type="Decimal"  />	
+		<property name="NoBackwashAmount3" column="NoBackwashAmount3" type="Decimal"  />	
+		<property name="TotalBillDetailAmount3" column="TotalBillDetailAmount3" type="Decimal"  />	
+		<property name="NoBackwashAmount4" column="NoBackwashAmount4" type="Decimal"  />	
+		<property name="TotalBillDetailAmount4" column="TotalBillDetailAmount4" type="Decimal"  />	
+		<property name="NoBackwashAmount5" column="NoBackwashAmount5" type="Decimal"  />	
+		<property name="TotalBillDetailAmount5" column="TotalBillDetailAmount5" type="Decimal"  />	
+		<property name="NoBackwashAmount6" column="NoBackwashAmount6" type="Decimal"  />	
+		<property name="TotalBillDetailAmount6" column="TotalBillDetailAmount6" type="Decimal"  />	
+		<property name="NoBackwashAmount7" column="NoBackwashAmount7" type="Decimal"  />	
+		<property name="TotalBillDetailAmount7" column="TotalBillDetailAmount7" type="Decimal"  />	
+		<property name="NoBackwashAmount8" column="NoBackwashAmount8" type="Decimal"  />	
+		<property name="TotalBillDetailAmount8" column="TotalBillDetailAmount8" type="Decimal"  />	
+		<property name="NoBackwashAmount9" column="NoBackwashAmount9" type="Decimal"  />	
+		<property name="TotalBillDetailAmount9" column="TotalBillDetailAmount9" type="Decimal"  />	
+  	</class>
+</hibernate-mapping>
